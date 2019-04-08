@@ -1,26 +1,34 @@
-let index   = 4,
-    slide   = document.getElementsByClassName('slide');
-
-    function hide(a) {
-        
-
-        if(a > slide.length - 1){
-            for(let i = 0; i < slide.length; i++){
-                slide[i].style.display = 'none';
-            }
-            slide[a].style.display = '';
-        }else {
-            a = 0;
-        }
-    };
+let slideIbdex 	= 1,
+	slide 		= document.getElementsByClassName('slide');
 
 
+showSlides(slideIbdex);
+function showSlides(n) {
+	check(n)
+    hideSlider()
+	slide[slideIbdex - 1].style.display = 'block';
+}
+
+function slidesButtons(n) {
+	showSlides(slideIbdex += n);	
+}
+setInterval(function(){
+	slidesButtons(1);
+},10000);
 
 
+function check(a){
+    if( a > slide.length) {
+		slideIbdex = 1;
+	}
+	if(a < 1) {
+		slideIbdex = slide.length;
+	}
+}
 
 
-setInterval(()=>{
-    index++;
-    hide(index);
-},1000);
-
+function hideSlider(){
+    for (let i = 0 ; i < slide.length; i++) {
+		slide[i].style.display = 'none';
+	}
+}
