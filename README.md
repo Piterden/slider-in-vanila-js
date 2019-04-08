@@ -1,5 +1,5 @@
 <h1>Vanilla JavaScript slider</h1>
------------------------------------------------------------------------------
+
 This slider automatically switch slides every 10 seconds.
 
 -----------------------------------------------------------------------------
@@ -8,7 +8,7 @@ This slider automatically switch slides every 10 seconds.
 1. Create main html ,css ,js file
 2. Connect css and js files in html
     in the body
-    '''
+    ```
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -18,6 +18,6 @@ This slider automatically switch slides every 10 seconds.
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    '''
+    ```
 
 
