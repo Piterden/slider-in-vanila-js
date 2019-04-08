@@ -5,8 +5,8 @@ This slider automatically switch slides every 10 seconds.
 -----------------------------------------------------------------------------
 ## Usage
 
-1. Create main html file
-2. Create html markup(# - replaced by your path to pictures)
+1. Create the main HTML file.
+2. Create HMTL markup (you should replace `#` with your paths to images).
 
 ```html
 <div class="box">
@@ -18,7 +18,7 @@ This slider automatically switch slides every 10 seconds.
 </div>
 ```
 
-3. Connect my js file in your html file in the footer
+3. Include my JS file to your HTML just before the closing `</body>` tag.
 
 ```html
 <script src="index.js"></script>
@@ -27,8 +27,8 @@ This slider automatically switch slides every 10 seconds.
 -----------------------------------------------------------------------------
 ## API
 
-* **`check`** - this function watching the slides
-* **`hideSlider`** - this function hide all slides
-* **`showSlides(n)`** - this function show slide n (n - number slides)
-* **`slidesButtons(n)`** - this function hides everything and shows one next slide
-* **`SetInterval`** - Timer, him turn on function slidesButtons(n) every 10 seconds
+* **`check`** - watchs the slides.
+* **`hideSlider`** - hides all slides.
+* **`showSlides(n)`** - shows slide `n`.
+* **`slidesButtons(n)`** - hides everything and shows one next slide.
+* **`SetInterval`** - Timer, turn on function slidesButtons(n) every 10 seconds.
