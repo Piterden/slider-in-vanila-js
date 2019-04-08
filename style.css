@@ -1,5 +1,7 @@
 img {
     max-width: 900px;
+    opacity: 0.3;
+    animation: hide 1s forwards;
 }
 
 body {
@@ -31,4 +33,13 @@ section .left_btn {
 }
 section .right_btn {
     right: 0;
+}
+
+@keyframes hide {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
 }

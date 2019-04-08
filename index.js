@@ -2,7 +2,7 @@ let slideIbdex 	= 1,
 		leftBtn 		= document.querySelector('.left_btn'),
 		rightBtn 		= document.querySelector('.right_btn'),
 		slide 			= document.getElementsByClassName('slide');
-
+ 
 
 showSlides(slideIbdex);
 // this function show slide n (n - number slides)
@@ -38,3 +38,13 @@ function hideSlider(){
 		slide[i].style.display = 'none';
 	}
 }
+
+// click in button Left_btn function hides everything and shows one next slide
+leftBtn.addEventListener('click', ()=> {
+	showSlides(slideIbdex += 1);
+} );
+
+// click in button Left_btn function hides everything and shows one prev slide
+rightBtn.addEventListener('click', ()=> {
+	showSlides(slideIbdex -= 1);
+} );
