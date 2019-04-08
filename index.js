@@ -1,5 +1,7 @@
 let slideIbdex 	= 1,
-	slide 		= document.getElementsByClassName('slide');
+		leftBtn 		= document.querySelector('.left_btn'),
+		rightBtn 		= document.querySelector('.right_btn'),
+		slide 			= document.getElementsByClassName('slide');
 
 
 showSlides(slideIbdex);
