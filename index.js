@@ -1,7 +1,8 @@
 let slideIbdex 	= 1,
 		leftBtn 		= document.querySelector('.left_btn'),
 		rightBtn 		= document.querySelector('.right_btn'),
-		dots				= document.querySelectorAll('.dot'),
+		dot				= document.getElementsByClassName('dot'),
+		dots				= document.querySelector('.dots'),	
 		slide 			= document.getElementsByClassName('slide');
  
 showSlides(slideIbdex);
@@ -53,9 +54,22 @@ rightBtn.addEventListener('click', ()=> {
 
 function checkDots(b) {
 	for (let i = 0; i < slide.length; i++) {
-		dots[i].classList.remove('active');
+		dot[i].classList.remove('active');
 	}
 }
+
 function showDots(b) {
-	dots[slideIbdex - 1].classList.add('active');
+	dot[slideIbdex - 1].classList.add('active');
 }
+
+function slidesDots(n) {
+	showSlides(slideIbdex = n);	
+}
+
+dots.addEventListener('click', function(event) {
+	for(let i = 0; i < dot.length +1; i++){
+		if(event.target.classList.contains('dot') && event.target == dot[i-1]){
+			slidesDots(i);
+		};
+	};
+});
