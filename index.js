@@ -8,8 +8,10 @@ showSlides(slideIbdex);
 // this function show slide n (n - number slides)
 function showSlides(n) {
 	check(n)
-    hideSlider()
+	hideSlider()
 	slide[slideIbdex - 1].style.display = 'block';
+	checkDots()
+	showDots()
 }
 
 // this function hides everything and shows one next slide
@@ -41,16 +43,19 @@ function hideSlider(){
 
 // click in button Left_btn function hides everything and shows one next slide
 leftBtn.addEventListener('click', ()=> {
-	showSlides(slideIbdex += 1);
+	showSlides(slideIbdex -= 1);
 } );
 
 // click in button Left_btn function hides everything and shows one prev slide
 rightBtn.addEventListener('click', ()=> {
-	showSlides(slideIbdex -= 1);
+	showSlides(slideIbdex += 1);
 } );
 
 function checkDots(b) {
-	if(b > dots.length) {
-		
+	for (let i = 0; i < slide.length; i++) {
+		dots[i].classList.remove('active');
 	}
+}
+function showDots(b) {
+	dots[slideIbdex - 1].classList.add('active');
 }
