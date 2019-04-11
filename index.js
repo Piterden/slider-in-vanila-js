@@ -1,9 +1,9 @@
 let slideIbdex 	= 1,
 		leftBtn 		= document.querySelector('.left_btn'),
 		rightBtn 		= document.querySelector('.right_btn'),
+		dots				= document.querySelectorAll('.dot'),
 		slide 			= document.getElementsByClassName('slide');
  
-
 showSlides(slideIbdex);
 // this function show slide n (n - number slides)
 function showSlides(n) {
@@ -48,3 +48,9 @@ leftBtn.addEventListener('click', ()=> {
 rightBtn.addEventListener('click', ()=> {
 	showSlides(slideIbdex -= 1);
 } );
+
+function checkDots(b) {
+	if(b > dots.length) {
+		
+	}
+}
