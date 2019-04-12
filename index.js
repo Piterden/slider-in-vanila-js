@@ -1,11 +1,13 @@
 let slideIbdex 	= 1,
 		leftBtn 		= document.querySelector('.left_btn'),
 		rightBtn 		= document.querySelector('.right_btn'),
-		dot				= document.getElementsByClassName('dot'),
+		dot					= document.getElementsByClassName('dot'),
 		dots				= document.querySelector('.dots'),	
-		slide 			= document.getElementsByClassName('slide');
- 
+		slide 			= document.getElementsByClassName('slide'); 
+
+
 showSlides(slideIbdex);
+
 // this function show slide n (n - number slides)
 function showSlides(n) {
 	check(n)
@@ -52,20 +54,24 @@ rightBtn.addEventListener('click', ()=> {
 	showSlides(slideIbdex += 1);
 } );
 
+// 
 function checkDots(b) {
 	for (let i = 0; i < slide.length; i++) {
 		dot[i].classList.remove('active');
 	}
 }
 
+// 
 function showDots(b) {
 	dot[slideIbdex - 1].classList.add('active');
 }
 
+// 
 function slidesDots(n) {
 	showSlides(slideIbdex = n);	
 }
 
+// 
 dots.addEventListener('click', function(event) {
 	for(let i = 0; i < dot.length +1; i++){
 		if(event.target.classList.contains('dot') && event.target == dot[i-1]){

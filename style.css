@@ -1,7 +1,57 @@
+@media screen and (max-width: 1024px) {
+    body {
+        max-width: 100%;
+    }
+    img {
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    body {
+        max-width: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        max-width: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        max-width: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        max-width: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 img {
-    max-width: 900px;
-    opacity: 0.3;
-    animation: hide 1s forwards;
+    opacity: 1;
+    /* animation: hide 1s forwards; */
 }
 
 body {
@@ -22,10 +72,11 @@ section {
 }
 .sliders {
     position: relative;
-    max-height: 600px;
+    /* max-height: 600px; */
 }
 
 section button {
+    outline: none;
     height: 100%;
     width: 50px;
     z-index: 20;
@@ -33,15 +84,22 @@ section button {
     cursor: pointer;
     position: absolute;
     border: 0;
-    background-color: rgba(172, 157, 157, 0.466);
+    transition: 0.3s;
+    background-color: rgba(172, 157, 157, 0.05);
 }
+
+section button:hover {
+    transition: 0.3s;
+    background-color: rgba(172, 157, 157, 0.15);
+}
+
 section .left_btn {
     left: 0;
 }
 section .right_btn {
     right: 0;
 }
-
+/* 
 @keyframes hide {
     from {
         opacity: 0.3;
@@ -49,7 +107,7 @@ section .right_btn {
     to {
         opacity: 1;
     }
-}
+} */
 
 .dots {
     display: flex;
@@ -83,3 +141,4 @@ section .right_btn {
     left: calc(50% - 5px);
     border: 5px solid #000;
 }
+
