@@ -38,7 +38,14 @@ This slider automatically switch slides every 10 seconds.
 * **`showSlides(n)`** - shows slide `n`.
 * **`slidesButtons(n)`** - hides everything and shows one next slide.
 * **`SetInterval`** - Timer, turn on function slidesButtons(n) every 10 seconds.
+* **`checkDots`** - check for dots and remove class active.
+* **`showDots`** - added class active .
+* **`slidesDots`** - responsible for matching the slide with a dot
+* **`dotsCreate`** - create dots , number of slides = number of dots
+
 
 * **` ivent 'click' on leftBtn `** - hides everything and shows one prev slide.
-* **` ivent 'click' on rightBtn `** - hides everything and shows one next slide
+* **` ivent 'click' on rightBtn `** - hides everything and shows one next slide.
+* **` ivent 'click' on dots `** - calls the corresponding slide.
+
 
