@@ -1,32 +1,51 @@
-<h1>Vanilla JavaScript slider</h1>
+# Vanilla JavaScript slider
 
 This slider automatically switch slides every 10 seconds.
 
 -----------------------------------------------------------------------------
-<h2>Usage</h2>
+## Usage
 
-1. Create main html file
-2. Create html markup(# - replaced by your path to pictures)
-    ```
-     <div class="box">
-            <img src="#" class="slide">
-            <img src="#" class="slide">
-            <img src="#" class="slide">
-            <img src="#" class="slide">
-            <img src="#" class="slide">
-        </div>
-    ```
-3. Connect my js file in your html file in the footer
-    ```
-        <script src="index.js"></script>
-    ```
+1. Create the main HTML file.
+2. Create HMTL markup (you should replace `#` with your paths to images).
+
+```html
+    <section>
+      <button class="left_btn"></button>
+
+      <div class="box">
+          <img src="image/alessandro-viaro-94370-unsplash.jpg" alt="" class="slide">
+          <img src="image/alexander-popov-342444-unsplash.jpg" alt="" class="slide">
+          <img src="image/federico-beccari-756834-unsplash.jpg" alt="" class="slide">
+          <img src="image/joe-desousa-327235-unsplash.jpg" alt="" class="slide">
+      </div>
+      
+      <button class="right_btn"></button>
+
+    </section>
+```
+ 
+3. Include my JS file to your HTML just before the closing `</body>` tag.
+
+```html
+<script src="index.js"></script>
+```
 
 -----------------------------------------------------------------------------
-<h2>Information on functions</h2>
+## API
 
-* check - this function watching the slides
-* hideSlider - this function hide all slides
-* showSlides(n) - this function show slide n (n - number slides)
-* slidesButtons(n) - this function hides everything and shows one next slide
+* **`check`** - watchs the slides.
+* **`hideSlider`** - hides all slides.
+* **`showSlides(n)`** - shows slide `n`.
+* **`slidesButtons(n)`** - hides everything and shows one next slide.
+* **`SetInterval`** - Timer, turn on function slidesButtons(n) every 10 seconds.
+* **`checkDots`** - check for dots and remove class active.
+* **`showDots`** - added class active .
+* **`slidesDots`** - responsible for matching the slide with a dot
+* **`dotsCreate`** - create dots , number of slides = number of dots
 
-* SetInterval - Timer, him turn on function slidesButtons(n) every 10 seconds
+
+* **` ivent 'click' on leftBtn `** - hides everything and shows one prev slide.
+* **` ivent 'click' on rightBtn `** - hides everything and shows one next slide.
+* **` ivent 'click' on dots `** - calls the corresponding slide.
+
+
